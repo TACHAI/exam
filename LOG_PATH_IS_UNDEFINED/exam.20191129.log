@@ -3762,3 +3762,5 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'exam.t_classes' doesn't exis
 2019-11-29 15:44:23.763 DEBUG 40718 --- [XNIO-1 task-314] r.c.a.e.repository.ExamPaperMapper.page  : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 'f' order by id desc LIMIT ? 
 2019-11-29 15:44:23.763 DEBUG 40718 --- [XNIO-1 task-314] r.c.a.e.repository.ExamPaperMapper.page  : ==> Parameters: 10(Integer)
 2019-11-29 15:44:23.764 DEBUG 40718 --- [XNIO-1 task-314] r.c.a.e.repository.ExamPaperMapper.page  : <==      Total: 2
+2019-11-29 15:54:06.728  INFO 40718 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-29 15:54:06.749  INFO 40718 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
