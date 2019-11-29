@@ -270,12 +270,13 @@
 				) a
 		GROUP BY create_time
   </select>
-
+<!-- todo 修改sql语句-->
   <update id="updateScore" parameterType="java.util.List">
     <foreach collection="list" item="item" >
-        update t_exam_paper_question_customer_answer
-        set customer_score=#{item.customerScore} , do_right=#{item.doRight}
-        where id=#{item.id} ;
+      update t_exam_paper_question_customer_answer
+
+      set customer_score=#{item.customerScore} , do_right=#{item.doRight}
+        where id=#{item.id}
     </foreach>
   </update>
 
