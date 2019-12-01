@@ -27,3 +27,4 @@
 
 ### Customer ###
 /logs/
+*.log
