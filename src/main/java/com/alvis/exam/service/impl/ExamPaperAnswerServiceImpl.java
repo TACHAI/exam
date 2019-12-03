@@ -105,7 +105,13 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
             ExamPaperAnswerUpdate examPaperAnswerUpdate = new ExamPaperAnswerUpdate();
             examPaperAnswerUpdate.setId(d.getId());
             examPaperAnswerUpdate.setCustomerScore(ExamUtil.scoreFromVM(d.getScore()));
-            boolean doRight = examPaperAnswerUpdate.getCustomerScore().equals(ExamUtil.scoreFromVM(d.getQuestionScore()));
+            // todo  换成其他
+            //boolean doRight = examPaperAnswerUpdate.getCustomerScore().equals(ExamUtil.scoreFromVM(d.getQuestionScore()));
+            boolean doRight = false;
+            if(Integer.parseInt(d.getScore())>0){
+                doRight = true;
+            }
+
             examPaperAnswerUpdate.setDoRight(doRight);
             examPaperAnswerUpdates.add(examPaperAnswerUpdate);
             customerScore += examPaperAnswerUpdate.getCustomerScore();

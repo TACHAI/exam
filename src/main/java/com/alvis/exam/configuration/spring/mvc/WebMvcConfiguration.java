@@ -3,7 +3,6 @@ package com.alvis.exam.configuration.spring.mvc;
 import com.alvis.exam.configuration.property.SystemConfig;
 import com.alvis.exam.configuration.spring.wx.TokenHandlerInterceptor;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 

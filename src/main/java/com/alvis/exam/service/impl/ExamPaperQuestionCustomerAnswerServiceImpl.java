@@ -86,7 +86,18 @@ public class ExamPaperQuestionCustomerAnswerServiceImpl extends BaseServiceImpl<
 
     @Override
     public int updateScore(List<ExamPaperAnswerUpdate> examPaperAnswerUpdates) {
-        return examPaperQuestionCustomerAnswerMapper.updateScore(examPaperAnswerUpdates);
+
+        int temp=0,res;
+        for(int i=0;i<examPaperAnswerUpdates.size();i++){
+            res = examPaperQuestionCustomerAnswerMapper.updateScoreById(examPaperAnswerUpdates.get(i));
+           if(res==1){
+               temp ++;
+           }
+        }
+
+        return temp;
+
+       // return examPaperQuestionCustomerAnswerMapper.updateScore(examPaperAnswerUpdates);
     }
 
     private void setSpecialToVM(ExamPaperSubmitItemVM examPaperSubmitItemVM, ExamPaperQuestionCustomerAnswer examPaperQuestionCustomerAnswer) {

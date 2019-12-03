@@ -4,7 +4,7 @@ spring:
     password: chaoxing
     port: 10002
   datasource:
-    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&characterEncoding=UTF-8&allowMultiQueries=true&tinyInt1isBit=false
     #    url: jdbc:postgresql://101.132.110.182:5432/exam
     username: root
     password: hzc778209
